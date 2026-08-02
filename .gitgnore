@@ -1,0 +1,72 @@
+# ==========================================
+# macOS (Arquivos do Sistema)
+# ==========================================
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.AppleDB
+.AppleDesktop
+
+# ==========================================
+# VS Code (Configurações Locais e Cache)
+# ==========================================
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+*.code-workspace
+.history/
+
+# ==========================================
+# JavaScript / Node.js / NPM / Yarn / pnpm
+# ==========================================
+# Dependências
+node_modules/
+jspm_packages/
+web_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Cache de Ferramentas e Frameworks
+.npm
+.eslintcache
+.stylelintcache
+.node_repl_history
+*.tsbuildinfo
+.next/
+.nuxt/
+.vuepress/dist
+.cache/
+.parcel-cache/
+
+# Diretórios de Build / Saída
+dist/
+out/
+build/
+
+# Testes e Cobertura
+coverage/
+*.lcov
+.nyc_output/
+
+# ==========================================
+# Variáveis de Ambiente e Segredos
+# ==========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
