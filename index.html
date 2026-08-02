@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cadastrar Conta</title>
+    
+    <!-- Script Oficial do Telegram WebApp -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen p-4 flex flex-col justify-between select-none">
+
+    <!-- Container do Formulário -->
+    <div class="max-w-md w-full mx-auto space-y-5">
+        
+        <!-- Cabeçalho -->
+        <div class="text-center pt-2">
+            <h1 class="text-xl font-bold text-emerald-400">Nova Conta Despesa</h1>
+            <p class="text-xs text-gray-400">Preencha os dados abaixo para registrar</p>
+        </div>
+
+        <form id="contaForm" class="space-y-4">
+            
+            <!-- Campo 1: Descrição -->
+            <div>
+                <label for="descricao" class="block text-xs font-medium text-gray-300 mb-1">Descrição</label>
+                <input type="text" id="descricao" required placeholder="Ex: Mercado, Aluguel, Luz"
+                    class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-500 transition">
+            </div>
+
+            <!-- Campo 2: Valor -->
+            <div>
+                <label for="valor" class="block text-xs font-medium text-gray-300 mb-1">Valor (R$)</label>
+                <input type="number" id="valor" step="0.01" min="0.01" required placeholder="0.00"
+                    class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-500 transition">
+            </div>
+
+            <!-- Campo 3: Categoria -->
+            <div>
+                <label for="categoria" class="block text-xs font-medium text-gray-300 mb-1">Categoria</label>
+                <select id="categoria" required 
+                    class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-500 transition">
+                    <option value="" disabled selected>Selecione uma categoria...</option>
+                    <option value="Alimentação">Alimentação</option>
+                    <option value="Moradia">Moradia</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Lazer">Lazer</option>
+                    <option value="Saúde">Saúde</option>
+                    <option value="Outros">Outros</option>
+                </select>
+            </div>
+
+            <!-- Campo 4: Data de Vencimento -->
+            <div>
+                <label for="dataVencimento" class="block text-xs font-medium text-gray-300 mb-1">Data de Vencimento</label>
+                <input type="date" id="dataVencimento" required
+                    class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-500 transition">
+            </div>
+
+            <!-- Botão de Envio -->
+            <button type="submit" id="btnSalvar"
+                class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-2.5 rounded-lg text-sm shadow-lg transition mt-4">
+                Salvar Conta
+            </button>
+        </form>
+    </div>
+
+    <!-- Importação do arquivo JavaScript separado -->
+    <script src="app.js"></script>
+</body>
+</html>
