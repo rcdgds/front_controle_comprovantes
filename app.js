@@ -20,12 +20,12 @@ form.addEventListener('submit', function(event) {
 
     // Captura os valores digitados
     const descricao = document.getElementById('descricao').value.trim();
-    const valor = parseFloat(document.getElementById('valor').value);
-    const categoria = document.getElementById('categoria').value;
+    const valorTotal = document.getElementById('valorTotal').value;
+    const classificacaoDespesa = document.getElementById('classificacaoDespesa').value;
     const dataVencimento = document.getElementById('dataVencimento').value;
 
     // Validação
-    if (!descricao || isNaN(valor) || !categoria || !dataVencimento) {
+    if (!descricao || isNaN(valorTotal) || !classificacaoDespesa || !dataVencimento) {
         tg.showAlert("Por favor, preencha todos os campos corretamente.");
         return;
     }
@@ -33,11 +33,12 @@ form.addEventListener('submit', function(event) {
     // Objeto DTO que espelha seu Record em Java
     const payload = {
         descricao: descricao,
-        valor: valor,
-        categoria: categoria,
+        valorTotal: valorTotal,
+        classificacaoDespesa: classificacaoDespesa,
         dataVencimento: dataVencimento
     };
 
+    
     // Envia a String JSON para o Telegram Webhook
     tg.sendData(JSON.stringify(payload));
 });
