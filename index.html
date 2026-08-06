@@ -18,7 +18,7 @@
         
         <!-- Cabeçalho -->
         <div class="text-center pt-2">
-            <h1 class="text-xl font-bold text-emerald-400">Nova Conta Despesa</h1>
+            <h1 class="text-xl font-bold text-emerald-400">Nova Despesa</h1>
             <p class="text-xs text-gray-400">Preencha os dados abaixo para registrar</p>
         </div>
 
@@ -33,12 +33,19 @@
 
             <!-- Campo 2: Valor -->
             <div>
-                <label for="valor" class="block text-xs font-medium text-gray-300 mb-1">Valor (R$)</label>
+                <label for="valor" class="block text-xs font-medium text-gray-300 mb-1">Valor (€)</label>
                 <input type="number" id="valor" step="0.01" min="0.01" required placeholder="0.00"
                     class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-500 transition">
             </div>
 
-            <!-- Campo 3: Categoria -->
+              <!-- Campo 3: Parcela -->
+            <div>
+                <label for="numeroDeParcelas" class="block text-xs font-medium text-gray-300 mb-1">Numero de Parcelas ()</label>
+                <input type="number" id="numeroDeParcelas" required placeholder="Deixar vazio se a compra for a vista"
+                    class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-500 transition">
+            </div>
+
+            <!-- Campo 4: Categoria -->
             <div>
                 <label for="classificacaoDespesa" class="block text-xs font-medium text-gray-300 mb-1">Categoria</label>
                 <select id="classificacaoDespesa" required 
@@ -51,7 +58,7 @@
                 </select>
             </div>
 
-            <!-- Campo 4: Data de Vencimento -->
+            <!-- Campo 5: Data de Vencimento -->
             <div>
                 <label for="dataVencimento" class="block text-xs font-medium text-gray-300 mb-1">Data de Vencimento</label>
                 <input type="date" id="dataVencimento" required
