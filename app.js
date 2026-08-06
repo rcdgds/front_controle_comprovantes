@@ -20,7 +20,7 @@ form.addEventListener('submit', function(event) {
 
     // Captura os valores digitados
     const descricao = document.getElementById('descricao').value.trim();
-    const valorTotal = document.getElementById('valorTotal').value;
+    const valorTotal = document.getElementById('valor').value;
     const classificacaoDespesa = document.getElementById('classificacaoDespesa').value;
     const dataVencimento = document.getElementById('dataVencimento').value;
 
