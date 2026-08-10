@@ -22,11 +22,12 @@
         const descricao = document.getElementById('descricao').value.trim();
         const valorTotal = document.getElementById('valor').value;
         const numeroDeParcelas = document.getElementById('numeroDeParcelas').value;
+        const statusPagamento = document.getElementById('statusPagamento').value;
         const classificacaoDespesa = document.getElementById('classificacaoDespesa').value;
         const dataVencimento = document.getElementById('dataVencimento').value;
 
         // Validação
-        if (!descricao || isNaN(valorTotal) || isNaN(valorTotal) || !classificacaoDespesa || !dataVencimento) {
+        if (!descricao || isNaN(valorTotal) || isNaN(valorTotal) || !statusPagamento || !classificacaoDespesa || !dataVencimento) {
             tg.showAlert("Por favor, preencha todos os campos corretamente.");
             return;
         }
@@ -36,6 +37,7 @@
             descricao: descricao,
             valorTotal: valorTotal,
             numeroDeParcelas : numeroDeParcelas,
+            statusPagamento: statusPagamento,
             classificacaoDespesa: classificacaoDespesa,
             dataVencimento: dataVencimento
         };
