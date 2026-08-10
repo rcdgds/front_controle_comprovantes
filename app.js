@@ -14,6 +14,12 @@
     // 2. Elementos do DOM
     const form = document.getElementById('contaForm');
 
+
+    // Esconde o teclado no celular após clicar em enviar
+    if (document.activeElement) {
+        document.activeElement.blur();
+    }
+
     // 3. Listener do Evento de Submit
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Impede o reload da página
@@ -27,7 +33,7 @@
         const dataVencimento = document.getElementById('dataVencimento').value;
 
         // Validação
-        if (!descricao || isNaN(valorTotal) || isNaN(valorTotal) || !statusPagamento || !classificacaoDespesa || !dataVencimento) {
+        if (!descricao || isNaN(valorTotal) || !statusPagamento || !classificacaoDespesa || !dataVencimento) {
             tg.showAlert("Por favor, preencha todos os campos corretamente.");
             return;
         }
