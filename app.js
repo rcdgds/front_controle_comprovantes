@@ -28,6 +28,7 @@
         const descricao = document.getElementById('descricao').value.trim();
         const valorTotal = document.getElementById('valor').value;
         const numeroDeParcelas = document.getElementById('numeroDeParcelas').value;
+        const payerByUser = document.getElementById('payerByUser').value;
         const statusPagamento = document.getElementById('statusPagamento').value;
         const classificacaoDespesa = document.getElementById('classificacaoDespesa').value;
         const dataVencimento = document.getElementById('dataVencimento').value;
@@ -43,6 +44,7 @@
             descricao: descricao,
             valorTotal: valorTotal,
             numeroDeParcelas : numeroDeParcelas,
+            payerByUser : payerByUser,
             statusPagamento: statusPagamento,
             classificacaoDespesa: classificacaoDespesa,
             dataVencimento: dataVencimento
