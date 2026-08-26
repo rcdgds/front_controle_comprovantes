@@ -33,7 +33,7 @@
         const dataVencimento = document.getElementById('dataVencimento').value;
 
         // Validação
-        if (!descricao || isNaN(valorTotal) || !classificacaoDespesa || !dataVencimento) {
+        if (!descricao || isNaN(valorTotal) ||!payerByUser || !classificacaoDespesa || !dataVencimento) {
             tg.showAlert("Por favor, preencha todos os campos corretamente.");
             return;
         }
